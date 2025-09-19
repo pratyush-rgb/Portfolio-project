@@ -7,7 +7,6 @@
     margin: 80px 170px;
 }
 
-/* Title Section */
 .contact-title {
     position: relative;
     text-align: center;
@@ -23,21 +22,19 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* Contact Section (2 columns) */
 .contact-Section {
     display: flex;
     gap: 50px;
     width: 100%;
-    flex-wrap: wrap; /* ✅ Mobile-friendly */
+    flex-wrap: wrap; 
 }
 
-/* Left Side */
 .contact-left {
     display: flex;
     flex-direction: column;
     gap: 30px;
     flex: 1;
-    min-width: 300px; /* ✅ Prevents shrinking too small */
+    min-width: 300px; 
 }
 
 .contact-left h1 {
@@ -52,7 +49,7 @@
 .contact-left p {
     font-size: 18px;
     line-height: 28px;
-    color: #cccccc; /* ✅ Softer text color for readability */
+    color: #cccccc; 
 }
 
 .contact-details {
@@ -75,7 +72,6 @@
     
 }
 
-/* Right Side (Form) */
 .contact-right {
     display: flex;
     flex-direction: column;
@@ -85,7 +81,7 @@
     min-width: 320px;
     padding: 20px;
     border-radius: 12px;
-    background: transparent; /* ✅ remove box look, let it blend */
+    background: transparent; 
 }
 
 .contact-right label {
@@ -97,12 +93,12 @@
 .contact-right input,
 .contact-right textarea {
     width: 100%;
-    border: 1px solid #333; /* ✅ subtle border */
-    padding: 12px 16px; /* ✅ smaller padding */
+    border: 1px solid #333;
+    padding: 12px 16px; 
     border-radius: 6px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
-    background: #1c1c1c; /* ✅ lighter than black */
+    background: #1c1c1c; 
     color: #eee;
     outline: none;
     transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -114,13 +110,11 @@
     box-shadow: 0 0 6px rgba(106, 17, 203, 0.6);
 }
 
-/* Make textarea align with inputs */
 .contact-right textarea {
     resize: none;
     min-height: 120px;
 }
 
-/* Submit button */
 .submit {
     border: none;
     color: white;
@@ -140,14 +134,14 @@
 .contact-right form {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* spacing between inputs, labels, textarea, and button */
+    gap: 20px; 
     width: 100%;
 }
 
-/* -------------------- MOBILE / TABLET -------------------- */
+
 @media (max-width: 768px) {
   .contact {
-    margin: 40px 30px;   /* reduce side spacing */
+    margin: 40px 30px;  
     gap: 50px;
     align-items: center;
   }
@@ -158,7 +152,7 @@
   }
 
   .contact-Section {
-    flex-direction: column; /* stack left & right */
+    flex-direction: column; 
     gap: 40px;
   }
 
@@ -176,7 +170,7 @@
   .contact-details {
     font-size: 18px;
     gap: 20px;
-    align-items: center; /* center contact info */
+    align-items: center; 
   }
 
   .contact-detail {
@@ -184,7 +178,7 @@
   }
 
   .contact-right {
-    width: 100%;   /* make form full width */
+    width: 100%;   
     padding: 15px;
   }
 
@@ -201,7 +195,6 @@
   }
 }
 
-/* -------------------- SMALL PHONES -------------------- */
 @media (max-width: 480px) {
   .contact {
     margin: 30px 15px;

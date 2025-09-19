@@ -1,4 +1,4 @@
-/* -------------------- NAVBAR BASE -------------------- */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px; /* use padding instead of margin */
+  padding: 10px 30px; 
   overflow-x: hidden;
 }
 
@@ -17,7 +17,6 @@
   width: auto;
 }
 
-/* -------------------- DESKTOP MENU -------------------- */
 .navmenu {
   display: flex;
   align-items: center;
@@ -42,10 +41,9 @@
 }
 
 .navmenu li:hover {
-  color: #2575fc; /* hover effect for desktop */
+  color: #2575fc;
 }
 
-/* -------------------- CONNECT BUTTON -------------------- */
 .navConnect {
   padding: 12px 28px;
   border-radius: 50px;
@@ -61,16 +59,14 @@
   transform: scale(1.05);
 }
 
-/* -------------------- HAMBURGER & CLOSE ICONS -------------------- */
 .nav-mob-c,
 .nav-mob-o {
   display: none;
 }
 
-/* -------------------- MOBILE STYLES -------------------- */
 @media (max-width: 768px) {
   html, body {
-    overflow-x: hidden; /* 🚫 prevent horizontal scrollbar */
+    overflow-x: hidden; 
   }
 
   .navbar {
@@ -78,20 +74,19 @@
   }
 
   .navConnect {
-    display: none; /* hide button on mobile */
+    display: none; 
   }
 
-  /* Hamburger icon (visible when closed) */
   .nav-mob-o {
     display: block;
     height: 35px;
     width: auto;
     cursor: pointer;
     position: relative;
-    z-index: 1001; /* keep above sidebar */
+    z-index: 1001; 
   }
 
-  /* Close icon (inside sidebar) */
+
   .nav-mob-c {
     display: block;
     height: 28px;
@@ -102,11 +97,11 @@
     right: 20px;
   }
 
-  /* Sidebar menu */
+
   .navmenu {
     position: fixed;
     top: 0;
-    right: -100%; /* ✅ fully hidden */
+    right: -100%; 
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
@@ -119,7 +114,7 @@
     transition: right 0.4s ease-in-out;
   }
 
-  /* Active class: slide-in */
+
   .navmenu.active {
     right: 0;
   }
@@ -133,14 +128,13 @@
   }
 
   .navmenu li:hover {
-    color: #2575fc; /* highlight hover on mobile too */
+    color: #2575fc; 
   }
 }
 
-/* -------------------- SMALL PHONES -------------------- */
 @media (max-width: 480px) {
   .navmenu {
-    width: 220px; /* ✅ smaller width */
+    width: 220px; 
   }
 
   .navmenu li {

@@ -1,4 +1,4 @@
-/* -------------------- FOOTER -------------------- */
+
 .footer {
   margin: 10px;
   display: flex;
@@ -6,12 +6,11 @@
   gap: 30px;
 }
 
-/* -------------------- TOP SECTION -------------------- */
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap; /* ✅ prevents overflow */
+  flex-wrap: wrap; 
   gap: 20px;
 }
 
@@ -27,7 +26,6 @@
   flex-wrap: wrap;
 }
 
-/* -------------------- EMAIL SUBSCRIBE -------------------- */
 .Email {
   display: flex;
   align-items: center;
@@ -36,19 +34,19 @@
   border-radius: 50px;
   background: #121212;
   width: 100%;
-  max-width: 400px; /* ✅ prevents overflow */
-  box-sizing: border-box; /* ✅ padding + border inside */
+  max-width: 400px; 
+  box-sizing: border-box;
 }
 
 .Email img {
   height: 20px;
   width: auto;
-  flex-shrink: 0; /* ✅ icon never squishes */
+  flex-shrink: 0; 
 }
 
 .Email input {
-  flex: 1; /* ✅ expands to available space */
-  min-width: 0; /* ✅ prevents overflow */
+  flex: 1; 
+  min-width: 0; 
   outline: none;
   border: none;
   background: transparent;
@@ -59,10 +57,9 @@
 
 .Email:hover {
   border: 2px solid white;
-  padding: 10px 18px; /* ✅ avoids layout shift */
+  padding: 10px 18px; 
 }
 
-/* -------------------- FOLLOW BUTTON -------------------- */
 .follow {
   font-size: 20px;
   font-weight: 700;
@@ -78,11 +75,10 @@
   transition: 0.3s;
 }
 
-/* -------------------- BOTTOM SECTION -------------------- */
 .bottom {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; /* ✅ wrap for mobile */
+  flex-wrap: wrap;
   gap: 20px;
   font-size: 18px;
 }
@@ -99,7 +95,6 @@
   width: auto;
 }
 
-/* -------------------- TABLET -------------------- */
 @media (max-width: 768px) {
   .top {
     flex-direction: column;
@@ -151,7 +146,6 @@
   }
 }
 
-/* -------------------- SMALL PHONES -------------------- */
 @media (max-width: 480px) {
   .top-left p {
     font-size: 13px;
