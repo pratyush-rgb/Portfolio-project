@@ -1,83 +1,193 @@
-.footer{
-    margin: 10px ;
-    display: flex;
+/* -------------------- FOOTER -------------------- */
+.footer {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* -------------------- TOP SECTION -------------------- */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* ✅ prevents overflow */
+  gap: 20px;
+}
+
+.top-left p {
+  font-size: 15px;
+  max-width: 600px;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+/* -------------------- EMAIL SUBSCRIBE -------------------- */
+.Email {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  background: #121212;
+  width: 100%;
+  max-width: 400px; /* ✅ prevents overflow */
+  box-sizing: border-box; /* ✅ padding + border inside */
+}
+
+.Email img {
+  height: 20px;
+  width: auto;
+  flex-shrink: 0; /* ✅ icon never squishes */
+}
+
+.Email input {
+  flex: 1; /* ✅ expands to available space */
+  min-width: 0; /* ✅ prevents overflow */
+  outline: none;
+  border: none;
+  background: transparent;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: white;
+}
+
+.Email:hover {
+  border: 2px solid white;
+  padding: 10px 18px; /* ✅ avoids layout shift */
+}
+
+/* -------------------- FOLLOW BUTTON -------------------- */
+.follow {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 40px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.follow:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* -------------------- BOTTOM SECTION -------------------- */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* ✅ wrap for mobile */
+  gap: 20px;
+  font-size: 18px;
+}
+
+.bottom-right {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.prrr {
+  height: 80px;
+  width: auto;
+}
+
+/* -------------------- TABLET -------------------- */
+@media (max-width: 768px) {
+  .top {
     flex-direction: column;
-    gap: 30px;
-
-
-}
-
-.Email img{
-    height: 20px;
-    width: auto;
-}
-
-
-.top{
-    display: flex;
-    justify-content: space-between;
-}
-
-.top-left p{
-    font-size: 15px;
-    max-width: 600px;
-}
-
-.top-right{
-    display: flex;
     align-items: center;
-    gap: 35px;
-}
+    text-align: center;
+    gap: 25px;
+  }
 
+  .top-left p {
+    font-size: 14px;
+    max-width: 90%;
+  }
 
-.Email{
-    display: flex;
-    gap: 30px;
-    padding: 20px 30px;
-    border-radius: 50px;
-    background: #121212;
-    padding-right: 80px;
-}
+  .top-right {
+    gap: 20px;
+    justify-content: center;
+  }
 
-.Email input{
-    outline: none;
-    border: none;
-    background: transparent;
-    font-family: 'Times New Roman', Times, serif;
+  .Email {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    padding: 12px 18px;
+  }
+
+  .Email input {
+    font-size: 16px;
+  }
+
+  .follow {
     font-size: 18px;
-}
-     
-.follow{
-    font-size: 20px;
-    font-weight: 700;
-    padding: 15px 40px;
-    border-radius: 50px;
-    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
-    cursor: pointer;
-    transition: 0.3s;
+    padding: 12px 28px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+  }
+
+  .bottom-right {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .prrr {
+    height: 60px;
+  }
 }
 
-.bottom{
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-}
+/* -------------------- SMALL PHONES -------------------- */
+@media (max-width: 480px) {
+  .top-left p {
+    font-size: 13px;
+    line-height: 20px;
+  }
 
-.bottom-right{
-    display: flex;
-    gap: 50px;
-    margin-bottom: 50px;
-}
+  .Email {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 12px;
+  }
 
-.Email:hover{
-    border: 2px solid white;
-}
+  .Email input {
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+  }
 
-.follow:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-.prrr{
-    height: 80px;
-    width: auto;
+  .follow {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    align-self: center;
+  }
+
+  .bottom {
+    font-size: 14px;
+    gap: 10px;
+  }
+
+  .bottom-right {
+    gap: 20px;
+  }
+
+  .prrr {
+    height: 50px;
+  }
 }

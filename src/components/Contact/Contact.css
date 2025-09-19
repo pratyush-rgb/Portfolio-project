@@ -144,4 +144,101 @@
     width: 100%;
 }
 
+/* -------------------- MOBILE / TABLET -------------------- */
+@media (max-width: 768px) {
+  .contact {
+    margin: 40px 30px;   /* reduce side spacing */
+    gap: 50px;
+    align-items: center;
+  }
+
+  .contact-title h1 {
+    font-size: 36px;
+    padding: 0;
+  }
+
+  .contact-Section {
+    flex-direction: column; /* stack left & right */
+    gap: 40px;
+  }
+
+  .contact-left h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .contact-left p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .contact-details {
+    font-size: 18px;
+    gap: 20px;
+    align-items: center; /* center contact info */
+  }
+
+  .contact-detail {
+    justify-content: center;
+  }
+
+  .contact-right {
+    width: 100%;   /* make form full width */
+    padding: 15px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  .submit {
+    font-size: 16px;
+    padding: 12px 30px;
+    align-self: center;
+  }
+}
+
+/* -------------------- SMALL PHONES -------------------- */
+@media (max-width: 480px) {
+  .contact {
+    margin: 30px 15px;
+    gap: 40px;
+  }
+
+  .contact-title h1 {
+    font-size: 28px;
+  }
+
+  .contact-left h1 {
+    font-size: 24px;
+  }
+
+  .contact-left p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .contact-details {
+    font-size: 16px;
+    gap: 15px;
+  }
+
+  .contact-detail img {
+    height: 22px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .submit {
+    font-size: 15px;
+    padding: 10px 24px;
+  }
+}
 

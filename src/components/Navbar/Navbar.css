@@ -1,4 +1,4 @@
-/* Navbar base */
+/* -------------------- NAVBAR BASE -------------------- */
 .navbar {
   position: sticky;
   top: 0;
@@ -8,15 +8,16 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 30px; /* use padding instead of margin */
+  overflow-x: hidden;
 }
 
-/* Logo + icons */
+/* Logo */
 .hola {
   height: 60px;
   width: auto;
 }
 
-/* Desktop nav menu */
+/* -------------------- DESKTOP MENU -------------------- */
 .navmenu {
   display: flex;
   align-items: center;
@@ -37,9 +38,14 @@
   flex-direction: column;
   padding: 0 30px;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-/* Connect button */
+.navmenu li:hover {
+  color: #2575fc; /* hover effect for desktop */
+}
+
+/* -------------------- CONNECT BUTTON -------------------- */
 .navConnect {
   padding: 12px 28px;
   border-radius: 50px;
@@ -55,7 +61,7 @@
   transform: scale(1.05);
 }
 
-/* Hide mobile menu icons by default */
+/* -------------------- HAMBURGER & CLOSE ICONS -------------------- */
 .nav-mob-c,
 .nav-mob-o {
   display: none;
@@ -63,8 +69,8 @@
 
 /* -------------------- MOBILE STYLES -------------------- */
 @media (max-width: 768px) {
-  body {
-    overflow-x: hidden; /* prevent horizontal scrollbar */
+  html, body {
+    overflow-x: hidden; /* 🚫 prevent horizontal scrollbar */
   }
 
   .navbar {
@@ -75,7 +81,7 @@
     display: none; /* hide button on mobile */
   }
 
-  /* Hamburger icon (only visible when closed) */
+  /* Hamburger icon (visible when closed) */
   .nav-mob-o {
     display: block;
     height: 35px;
@@ -85,7 +91,7 @@
     z-index: 1001; /* keep above sidebar */
   }
 
-  /* Close icon (only visible inside sidebar) */
+  /* Close icon (inside sidebar) */
   .nav-mob-c {
     display: block;
     height: 28px;
@@ -100,7 +106,7 @@
   .navmenu {
     position: fixed;
     top: 0;
-    right: -350px; /* hidden by default */
+    right: -100%; /* ✅ fully hidden */
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
@@ -110,6 +116,7 @@
     padding: 80px 20px 20px;
     margin: 0;
     z-index: 1000;
+    transition: right 0.4s ease-in-out;
   }
 
   /* Active class: slide-in */
@@ -122,5 +129,21 @@
     padding: 10px 0;
     flex-direction: row;
     gap: 15px;
+    cursor: pointer;
+  }
+
+  .navmenu li:hover {
+    color: #2575fc; /* highlight hover on mobile too */
+  }
+}
+
+/* -------------------- SMALL PHONES -------------------- */
+@media (max-width: 480px) {
+  .navmenu {
+    width: 220px; /* ✅ smaller width */
+  }
+
+  .navmenu li {
+    font-size: 20px;
   }
 }
