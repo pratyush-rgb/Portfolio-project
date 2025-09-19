@@ -1,0 +1,147 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+
+/* Title Section */
+.contact-title {
+    position: relative;
+    text-align: center;
+}
+
+.contact-title h1 {
+    padding: 0px 30px;
+    font-size: 50px;
+    font-weight: 600;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Contact Section (2 columns) */
+.contact-Section {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+    flex-wrap: wrap; /* ✅ Mobile-friendly */
+}
+
+/* Left Side */
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+    min-width: 300px; /* ✅ Prevents shrinking too small */
+}
+
+.contact-left h1 {
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff00cc 0%, #333399 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact-left p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #cccccc; /* ✅ Softer text color for readability */
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    font-size: 20px;
+    color: #e0e0e0;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-detail img {
+    height: 28px;
+    width: auto;
+    
+}
+
+/* Right Side (Form) */
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
+    min-width: 320px;
+    padding: 20px;
+    border-radius: 12px;
+    background: transparent; /* ✅ remove box look, let it blend */
+}
+
+.contact-right label {
+    color: #e0e0e0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact-right input,
+.contact-right textarea {
+    width: 100%;
+    border: 1px solid #333; /* ✅ subtle border */
+    padding: 12px 16px; /* ✅ smaller padding */
+    border-radius: 6px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    background: #1c1c1c; /* ✅ lighter than black */
+    color: #eee;
+    outline: none;
+    transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.contact-right input:focus,
+.contact-right textarea:focus {
+    border: 1px solid #6a11cb;
+    box-shadow: 0 0 6px rgba(106, 17, 203, 0.6);
+}
+
+/* Make textarea align with inputs */
+.contact-right textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+/* Submit button */
+.submit {
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    font-size: 18px;
+    padding: 14px 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.submit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(106, 17, 203, 0.4);
+}
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* spacing between inputs, labels, textarea, and button */
+    width: 100%;
+}
+
+

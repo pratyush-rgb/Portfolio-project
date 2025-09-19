@@ -1,0 +1,98 @@
+.main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.main img{
+    margin-top: 20px;
+    height: 300px;
+    width: auto;
+}
+
+.main h1{
+    text-align: center;
+    width: 70%;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.main h1 span{
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.main p{
+    width: 60%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+}
+.action{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.connect{
+    padding: 25px 45px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    cursor: pointer;
+    
+}
+
+.cv{
+    padding: 25px 75px;
+    border-radius: 50px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.connect:hover{
+    border: 2px solid white;
+}
+
+.cv:hover{
+    border-color: #2575fc;
+    
+    
+}
+
+@media(max-width:768px){
+    .main img{
+        margin-top: 120px;
+        width: auto;
+    }
+    .main h1{
+        margin-top: 50px;
+        width: 90%;
+        font-size: 50px;
+    }
+    .main p{
+        width: 60%;
+        font-size: 18px;
+        line-height: 32px;
+        margin: 10px 0px;
+    }
+    .action{
+        gap: 16px;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+    .connect{
+        padding: 20px 30px;
+        border-radius: 40px;
+
+    }
+    .cv{
+        padding: 20px 50px;
+        border-radius: 40px;
+    }
+}
+

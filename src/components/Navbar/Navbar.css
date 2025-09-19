@@ -1,0 +1,126 @@
+/* Navbar base */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px; /* use padding instead of margin */
+}
+
+/* Logo + icons */
+.hola {
+  height: 60px;
+  width: auto;
+}
+
+/* Desktop nav menu */
+.navmenu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  transition: right 0.4s ease-in-out;
+}
+
+.navmenu img {
+  height: 20px;
+  width: auto;
+}
+
+.navmenu li {
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+/* Connect button */
+.navConnect {
+  padding: 12px 28px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.navConnect:hover {
+  transform: scale(1.05);
+}
+
+/* Hide mobile menu icons by default */
+.nav-mob-c,
+.nav-mob-o {
+  display: none;
+}
+
+/* -------------------- MOBILE STYLES -------------------- */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* prevent horizontal scrollbar */
+  }
+
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .navConnect {
+    display: none; /* hide button on mobile */
+  }
+
+  /* Hamburger icon (only visible when closed) */
+  .nav-mob-o {
+    display: block;
+    height: 35px;
+    width: auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 1001; /* keep above sidebar */
+  }
+
+  /* Close icon (only visible inside sidebar) */
+  .nav-mob-c {
+    display: block;
+    height: 28px;
+    width: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* Sidebar menu */
+  .navmenu {
+    position: fixed;
+    top: 0;
+    right: -350px; /* hidden by default */
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: #1c1c1c;
+    width: 280px;
+    height: 100vh;
+    padding: 80px 20px 20px;
+    margin: 0;
+    z-index: 1000;
+  }
+
+  /* Active class: slide-in */
+  .navmenu.active {
+    right: 0;
+  }
+
+  .navmenu li {
+    font-size: 22px;
+    padding: 10px 0;
+    flex-direction: row;
+    gap: 15px;
+  }
+}
